@@ -1,0 +1,40 @@
+@import '@/styles/mixins/responsive.sass'
+.arrow
+  padding:15px
+  cursor: pointer
+  @include mobile
+    padding: 10px
+
+.row
+  display: flex
+  align-items: center
+  justify-content: center
+  
+.carousel
+  width:1200px
+  display: flex
+  flex-direction: row
+  overflow: hidden
+  @include desktop-m
+    width: 960px
+  @include mobile
+    width: 240px
+
+
+.move
+  width:1200px
+  display: flex
+  position: relative
+  transition: right 0.6s ease-out
+  @include desktop-m
+    width: 960px
+  @include mobile
+    width: 240px
+
+.display
+  opacity: 0
+
+.cards
+  @include mobile
+    position: relative
+    right: 10px

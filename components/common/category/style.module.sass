@@ -1,0 +1,39 @@
+@import @/styles/_variables.module.sass
+@import '@/styles/mixins/responsive.sass'
+
+.container
+    width: 80%
+    display: flex
+    flex-direction: column
+    margin: auto
+
+.row
+    width: 100%
+    margin: auto
+    display: flex
+    justify-content: center
+
+.menuContainer
+    width: 100%
+    height: 100%
+    position: relative
+
+.menu
+    height: 100%
+    position: absolute
+    top: 72%
+    right: 13%
+
+.line
+    height: 3px
+    width: 100%
+    background: $brown
+    @include mobile-m
+        margin-top: 50px
+.noData
+    width: 70%
+    text-align: center
+    @include mobile-m
+        margin-top: 50px
+        font-size: 20px
+    
