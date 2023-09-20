@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import styles from './personalinfo.module.sass'
-import { AuthContextProvider } from '@/contexts/AuthContext'
+
 import AuthContext from '@/contexts/AuthContext'
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import { useRouter } from 'next/router'
-import Modal from 'react-modal'
 
 // components
 import InputBox from '@/components/common/inputBox/index.js'
@@ -27,8 +26,7 @@ export default function Personalinfo() {
   const [user, setUser] = useState('')
   const [invalidFields, setInvalidFields] = useState([])
   const [errorMessage, setErrorMessage] = useState('') // Define a state variable to store the error message
-  const [getImg, setGetImg] = useState('')
-  const [modalIsOpen, setModalIsOpen] = useState(false) // 跟蹤 modal 是否打開
+
   const [cancelEditing, setCancelEditing] = useState(false)
   const dayjs = require('dayjs')
   const [isIncorrect, setIsIncorrect] = useState(false)

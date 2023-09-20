@@ -16,7 +16,6 @@ import doorGodRight from '@/assets/doorGodRight.svg'
 import Alert from '@/components/common/alert'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import VisibilityIcon from '@mui/icons-material/Visibility'
-import data from '@/components/mydata/memberNavbarData.js'
 
 //bt
 
@@ -101,7 +100,7 @@ export default function SignUp() {
       : null
   })
 
-  // 定義 getErrorForField 函式
+  // 定義 getErrorForField 函式 在各個欄位呼叫這個函式 // find會迭代
   const getErrorForField = (field) => {
     const invalidFieldObj = invalidFieldsArray.find(
       (item) => item && item.field === field
@@ -134,6 +133,7 @@ export default function SignUp() {
 
   const doSignUp = () => {
     const validateResult = validateForm()
+    //第一關認證
     if (validateResult) {
       // Collect all the invalid fields and set the state
       const invalidFieldsArray = Object.keys(validationRules).map((field) => {

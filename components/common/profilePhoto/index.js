@@ -1,4 +1,3 @@
-import { AuthContextProvider } from '@/contexts/AuthContext'
 import AuthContext from '@/contexts/AuthContext'
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import { useRouter } from 'next/router'
@@ -7,10 +6,8 @@ import styles from '@/components/common/profilePhoto/profilePhoto.module.sass'
 import variables from '@/styles/_variables.module.sass'
 
 // components
-import InputBox from '@/components/common/inputBox/index.js'
-import Title from '@/components/common/title/index.js'
+
 import Button from '@/components/common/button'
-import MemberNavbar from '@/components/common/memberNavbar/index.js'
 
 //bootstrap
 import { Container, Row, Col } from 'react-bootstrap'
@@ -19,9 +16,7 @@ export default function ProfilePhoto() {
   const { auth, setAuth, logout } = useContext(AuthContext)
   const router = useRouter()
   const { id } = router.query
-  const [user, setUser] = useState('')
-  const [invalidFields, setInvalidFields] = useState([])
-  const [errorMessage, setErrorMessage] = useState('') // Define a state variable to store the error message
+
   const [getImg, setGetImg] = useState('')
   const [modalIsOpen, setModalIsOpen] = useState(false) // 設定 modal 是否打開
 
@@ -60,8 +55,8 @@ export default function ProfilePhoto() {
   // 上傳照片測試
 
   const handleImageClick = () => {
-    // 當點擊照片時，此函數將被觸發
-    // 在此，您可以打開小視窗
+    // 當點擊照片這個函數將被觸發
+    // 可以打開小視窗
     console.log('點擊照片')
 
     // 觸發文件輸入框的點擊事件

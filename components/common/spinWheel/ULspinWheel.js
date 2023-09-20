@@ -1,18 +1,13 @@
-import React, { useState, useEffect, useContext, useRef } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import styles from '@/components/common/spinWheel/spinWheel.module.sass'
-import { AuthContextProvider } from '@/contexts/AuthContext'
 import AuthContext from '@/contexts/AuthContext'
-import { useRouter } from 'next/router'
 import Modal from 'react-modal'
 import variables from '@/styles/_variables.module.sass'
 import Image from 'next/image'
 import Confetti from 'react-confetti'
 
 // components
-import InputBox from '@/components/common/inputBox/index.js'
-import Title from '@/components/common/title/index.js'
 import Button from '@/components/common/button/index.js'
-import MemberNavbar from '@/components/common/memberNavbar/index.js'
 import {
   Rainbow,
   colorMap,

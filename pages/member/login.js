@@ -5,7 +5,7 @@ import styles from '@/pages/member/login.module.sass'
 import Link from 'next/link'
 import { useState, useContext } from 'react'
 import AuthContext from '@/contexts/AuthContext'
-import { AuthContextProvider } from '@/contexts/AuthContext'
+
 import { useRouter } from 'next/router'
 
 // components
